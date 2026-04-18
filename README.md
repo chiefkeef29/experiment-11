@@ -1,17 +1,82 @@
-AIM: To create a dataset manually using Python's Pandas library, save it as a CSV file, and load an external dataset (Cars93) into a Pandas DataFrame. To explore and analyze both datasets using various Pandas functions such as info(), shape, head(), tail(), describe(), isnull(), duplicated(), and nunique().
 
-THEORY Pandas is an open-source Python library used for data manipulation and analysis. It provides powerful data structures — primarily the DataFrame — that allow structured data to be stored, accessed, and analyzed efficiently. Dataset Creation: A dataset can be created in Pandas by defining a Python dictionary where keys represent column names and values are lists of data. This dictionary is then converted into a DataFrame using pd.DataFrame(). The resulting DataFrame can be exported to a CSV file using df.to_csv(). Loading a Dataset: An existing CSV file can be loaded into a Pandas DataFrame using pd.read_csv(), which reads the file and structures it into rows and columns for further analysis. Key Pandas Functions Used:
 
-df.info() — Displays metadata such as column names, data types, and non-null counts. Helps identify missing values and data types at a glance. 
-df.shape — Returns the dimensions of the DataFrame as (rows, columns). df.head(n) — Returns the first n rows (default 5) for a quick preview of the data. 
-df.tail(n) — Returns the last n rows to inspect the end of the dataset. df.describe() — Generates descriptive statistics (mean, std, min, max, quartiles) for numerical columns.
-df.isnull().sum() — Counts missing (NaN) values in each column, essential for data cleaning. 
-df.duplicated().sum() — Counts duplicate rows to ensure data integrity. 
-df.nunique() — Returns the number of unique values per column, useful for understanding data cardinality.
+---
 
-DataFrames support mixed data types (integers, floats, strings) across columns, making them ideal for real-world datasets like the Cars93 dataset, which contains information on 93 car models with attributes like Manufacturer, Price, MPG, Horsepower, and more.
+# **README – Experiment 11: Data Visualization using Python**
 
-CONCLUSION In this experiment, we successfully:
+## **Aim**
 
-Created a student dataset with 5 records and 4 columns (Roll No, Gender, Department, CGPA) using a Python dictionary and converted it into a Pandas DataFrame, which was then saved as a CSV file (student_data.csv). Loaded the Cars93 dataset from a CSV file — a real-world dataset containing 93 rows and 10 columns covering various car attributes. Explored both datasets using essential Pandas functions:
-Thus, we learned how to programmatically create, save, load, and perform basic exploratory data analysis (EDA) on datasets using the Pandas library in Python.
+To visualize data using Python by creating different types of graphs and plots in order to better understand patterns, trends, and relationships within the dataset.
+
+---
+
+## **Theory**
+
+Data visualization is the graphical representation of data using plots, charts, and graphs. It helps in simplifying complex datasets, making it easier to identify patterns, trends, and outliers. In this experiment, Python libraries such as **matplotlib** and **pandas** are used to create and customize visual representations of data.
+
+Visualization plays a key role in exploratory data analysis (EDA), as it allows users to quickly interpret large amounts of information and communicate insights effectively. Different types of plots are used depending on the nature of the data:
+
+* **Line plots** are used to show trends over time.
+* **Bar charts** are used to compare quantities across categories.
+* **Histograms** are used to understand the distribution of numerical data.
+* **Pie charts** are used to show proportions of categories.
+* **Scatter plots** are used to identify relationships between two variables.
+
+### **Functions Used and Their Uses**
+
+* **`import matplotlib.pyplot as plt`**
+  Imports the plotting library.
+  *Use:* Provides functions to create various types of plots.
+
+* **`plt.plot()`**
+  Creates a line plot.
+  *Use:* To visualize trends or continuous data.
+
+* **`plt.bar()`**
+  Creates a bar chart.
+  *Use:* To compare values across different categories.
+
+* **`plt.hist()`**
+  Creates a histogram.
+  *Use:* To show frequency distribution of numerical data.
+
+* **`plt.pie()`**
+  Creates a pie chart.
+  *Use:* To represent proportions of a whole.
+
+* **`plt.scatter()`**
+  Creates a scatter plot.
+  *Use:* To observe relationships or correlations between variables.
+
+* **`plt.xlabel()` and `plt.ylabel()`**
+  Set labels for axes.
+  *Use:* To describe what each axis represents.
+
+* **`plt.title()`**
+  Adds a title to the graph.
+  *Use:* To provide context to the visualization.
+
+* **`plt.legend()`**
+  Displays legend on the plot.
+  *Use:* To differentiate multiple data series.
+
+* **`plt.show()`**
+  Displays the plot.
+  *Use:* To render the visualization output.
+
+* **`pd.read_csv()`**
+  Loads dataset into a DataFrame.
+  *Use:* To import data for visualization.
+
+* **`DataFrame.plot()`**
+  A pandas built-in plotting method.
+  *Use:* Quickly generates plots directly from data.
+
+---
+
+## **Conclusion**
+
+This experiment highlights the importance of data visualization in understanding datasets. By using Python libraries like matplotlib and pandas, complex data can be represented in a clear and meaningful way. Different types of plots help in identifying trends, distributions, and relationships, making it easier to draw conclusions and support decision-making. Overall, visualization enhances both data analysis and communication of insights.
+
+---
+
