@@ -2,14 +2,16 @@ AIM: To create a dataset manually using Python's Pandas library, save it as a CS
 
 THEORY Pandas is an open-source Python library used for data manipulation and analysis. It provides powerful data structures — primarily the DataFrame — that allow structured data to be stored, accessed, and analyzed efficiently. Dataset Creation: A dataset can be created in Pandas by defining a Python dictionary where keys represent column names and values are lists of data. This dictionary is then converted into a DataFrame using pd.DataFrame(). The resulting DataFrame can be exported to a CSV file using df.to_csv(). Loading a Dataset: An existing CSV file can be loaded into a Pandas DataFrame using pd.read_csv(), which reads the file and structures it into rows and columns for further analysis. Key Pandas Functions Used:
 
-df.info() — Displays metadata such as column names, data types, and non-null counts. Helps identify missing values and data types at a glance. df.shape — Returns the dimensions of the DataFrame as (rows, columns). df.head(n) — Returns the first n rows (default 5) for a quick preview of the data. df.tail(n) — Returns the last n rows to inspect the end of the dataset. df.describe() — Generates descriptive statistics (mean, std, min, max, quartiles) for numerical columns. df.isnull().sum() — Counts missing (NaN) values in each column, essential for data cleaning. df.duplicated().sum() — Counts duplicate rows to ensure data integrity. df.nunique() — Returns the number of unique values per column, useful for understanding data cardinality.
+df.info() — Displays metadata such as column names, data types, and non-null counts. Helps identify missing values and data types at a glance. 
+df.shape — Returns the dimensions of the DataFrame as (rows, columns). df.head(n) — Returns the first n rows (default 5) for a quick preview of the data. 
+df.tail(n) — Returns the last n rows to inspect the end of the dataset. df.describe() — Generates descriptive statistics (mean, std, min, max, quartiles) for numerical columns.
+df.isnull().sum() — Counts missing (NaN) values in each column, essential for data cleaning. 
+df.duplicated().sum() — Counts duplicate rows to ensure data integrity. 
+df.nunique() — Returns the number of unique values per column, useful for understanding data cardinality.
 
 DataFrames support mixed data types (integers, floats, strings) across columns, making them ideal for real-world datasets like the Cars93 dataset, which contains information on 93 car models with attributes like Manufacturer, Price, MPG, Horsepower, and more.
 
 CONCLUSION In this experiment, we successfully:
 
 Created a student dataset with 5 records and 4 columns (Roll No, Gender, Department, CGPA) using a Python dictionary and converted it into a Pandas DataFrame, which was then saved as a CSV file (student_data.csv). Loaded the Cars93 dataset from a CSV file — a real-world dataset containing 93 rows and 10 columns covering various car attributes. Explored both datasets using essential Pandas functions:
-
-The Cars93 dataset had missing values in the AirBags (34), Rear.seat.room (2), and Luggage.room (11) columns, while the student dataset had no missing values. No duplicate rows were found in the Cars93 dataset. Descriptive statistics revealed that the average car price was ~$19.5K, mean horsepower was ~144, and average city MPG was ~22. The dataset contained 32 unique manufacturers and 6 car types.
-
 Thus, we learned how to programmatically create, save, load, and perform basic exploratory data analysis (EDA) on datasets using the Pandas library in Python.
